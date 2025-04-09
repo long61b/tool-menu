@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Tool Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 50px;
+        }
+        .menu {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .toggle-btn {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .on {
+            background-color: green;
+            color: white;
+        }
+        .off {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fake Tool Menu</h1>
+    <div class="menu">
+        <button class="toggle-btn off" id="immortalBtn" onclick="toggle(this)">Bất Tử: TẮT</button>
+        <button class="toggle-btn off" id="cooldownBtn" onclick="toggle(this)">Hủy Hồi Chiêu: TẮT</button>
+    </div><script>
+    function toggle(button) {
+        if (button.classList.contains("off")) {
+            button.classList.remove("off");
+            button.classList.add("on");
+            button.innerText = button.innerText.replace("TẮT", "BẬT");
+        } else {
+            button.classList.remove("on");
+            button.classList.add("off");
+            button.innerText = button.innerText.replace("BẬT", "TẮT");
+        }
+    }
+</script>
+
+</body>
+</html>
